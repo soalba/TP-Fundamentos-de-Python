@@ -1,7 +1,7 @@
 ANÁLISIS EXPLORATORIO DEL MERCADO INMOBILIARIO DE CABA (PROPERATI 2020)
 
 DESCRIPCIÓN DEL PROYECTO
-Este trabajo corresponde al proyecto integrador de la materia Fundamentos de Python. 
+Este trabajo corresponde al proyecto integrador del SAT llamado Fundamentos de Python. 
 El objetivo fue realizar un análisis exploratorio de datos (EDA) sobre el mercado inmobiliario de la Ciudad Autónoma de Buenos Aires (CABA), utilizando el dataset público de Properati 2020.
 
 El análisis busca responder a la siguiente pregunta central:
@@ -11,10 +11,10 @@ El análisis busca responder a la siguiente pregunta central:
 ETAPAS DEL PROCESO
 
 1. Definición del problema
-Analicé la formación de precios en el mercado inmobiliario porteño, identificando patrones de precio por barrio, la relación entre precio, superficie y tipo de propiedad, y diferencias entre zonas del norte, centro y sur de la ciudad.
+Analizamos la formación de precios en el mercado inmobiliario porteño, identificando patrones de precio por barrio, la relación entre precio, superficie y tipo de propiedad, y diferencias entre zonas del norte, centro y sur de la ciudad.
 
 2. Preparación y limpieza de datos
-Trabajé con el dataset bsas_realstate_on_sale_properati_dataset_2020.csv.
+Trabajamos con el dataset bsas_realstate_on_sale_properati_dataset_2020.csv.
 Principales pasos aplicados:
 - Eliminación de duplicados.
 - Reemplazo de valores nulos en superficies por la mediana (ya que es un dato que relativamente podría ser reemplazado, no como la latitud y longitud, que cuando son nulos no pueden ser reemplazados por la media).
@@ -22,7 +22,7 @@ Principales pasos aplicados:
 - Eliminación de valores atípicos mediante el método IQR (rango intercuartílico) en precio, superficie y precio por m².
 
 3. Exploración inicial (EDA básico)
-Analicé las relaciones fundamentales entre variables.
+Analizamos las relaciones fundamentales entre variables.
 - Dispersión entre superficie total y precio: relación positiva, aunque con alta dispersión, mostrando que el tamaño no explica completamente el precio.
 - Distribución del precio por m²: sesgada a la derecha, con mayor concentración entre 1.500 y 3.000 USD/m².
 
@@ -32,7 +32,7 @@ Se puede la tendencia general ascendente, con amplia variabilidad. Esto podría 
 
 MINERÍA DE PATRONES (MINE)
 
-Se buscaron patrones relevantes agrupando por barrio (l3) y tipo de propiedad.
+Buscamos patrones relevantes agrupando por barrio (l3) y tipo de propiedad.
 
 - Precio promedio por m² por barrio:
   Se filtraron los barrios con al menos 30 publicaciones para evitar sesgos. 
@@ -51,7 +51,7 @@ Se buscaron patrones relevantes agrupando por barrio (l3) y tipo de propiedad.
 
 MATRIZ DE CORRELACIÓN
 
-Calculé la matriz de correlación para las variables numéricas del dataset.
+Calculamos la matriz de correlación para las variables numéricas del dataset.
 Los resultados muestran:
 - Correlación positiva alta entre price y surface_total (0.51), indicando que el tamaño es un factor determinante del precio total.
 - Correlación negativa moderada entre price_m2 y surface_total (-0.33), lo que sugiere que las propiedades más grandes suelen tener menor precio por m².
